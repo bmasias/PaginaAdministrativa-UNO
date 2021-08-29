@@ -313,9 +313,7 @@ Header End
 Inner Header Start
 *********************************/
 
-.inner-header {
-	background: url(../images/innerheader.jpg) no-repeat;
-}
+
 .inner-header h1 {
 	color: #fff;
 	margin: 0 0 20px;
@@ -1766,7 +1764,7 @@ section.services-area ul li.active:after {
 /***************  Urgent Causes  *****************/
 
 .urgent-causes {
-	background: url(../images/gallery/lgall7.jpg) no-repeat center center #000;
+	background: url(../images/news-artilcesbg.jpg) no-repeat center center #000;
 	background-size: cover;
 }
 .section-title-2 h5 {
