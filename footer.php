@@ -57,7 +57,7 @@
             <div class="footer-copyr wf100">
                <div class="container">
                   <div class="row">
-                     <div class="col-md-4 col-sm-4"> LOGO EMPRESA </div>
+                     <div class="col-md-4 col-sm-4">AGROFAENAS</div>
                      <div class="col-md-8 col-sm-8">
                         <p><a target="_blank" href="">DESARROLLADO POR BASTIAN MASIAS</a></p>
                      </div>

@@ -1,9 +1,9 @@
          <!--Header Start-->
          <header class="header-style-2">
             <nav class="navbar navbar-expand-lg">
-               <a class="navbar-brand text-white" href="">LOGO EMPRESA</a>
+               <a class="navbar-brand text-white" href="">AGROFAENAS</a>
                
-              <!-- <a class="navbar-brand" href="index-2.html"><img src="images/h2logo.png" alt=""></a>-->
+              <a class="navbar-brand" href="index-2.html"><img src="images/logo.jpg" alt=""></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"></i> </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
