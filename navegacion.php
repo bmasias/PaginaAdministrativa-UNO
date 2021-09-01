@@ -1,3 +1,4 @@
+      
          <!--Header Start-->
          <header class="header-style-2">
             <nav class="navbar navbar-expand-lg">
@@ -103,7 +104,13 @@
                            <li><a href="contact-two.html">Contact Two</a> </li>
                         </ul>
                      </li>
+                    
+                     
                   </ul>
+                  <div class="idiomas">
+                        <a href="index.php?lang=en"><span class="flag-icon flag-icon-us "></span></a>
+                        <a href="index.php?lang=es"><span class="flag-icon flag-icon-es"></a>
+                     </div>
 
                </div>
             </nav>

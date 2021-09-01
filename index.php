@@ -1,3 +1,5 @@
+<?php include ("config.php");?>
+
 <!doctype html>
 <html lang="en">
    
@@ -7,8 +9,9 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <link rel="icon" href="images/favicon.png">
-      <title>Pagina Principal</title>
+      <title><?php echo $lang['title'] ?></title>
       <!-- CSS FILES START -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link href="css/custom.css" rel="stylesheet">
       <link href="css/color.css" rel="stylesheet">
       <link href="css/responsive.css" rel="stylesheet">
@@ -20,6 +23,7 @@
    </head>
    <body>
       <div class="wrapper home2">
+        
          <?php include("navegacion.php");?>
          <div id="search">
             <button type="button" class="close">×</button>
@@ -121,15 +125,15 @@
                <div class="row">
                   <div class="col-md-6">
                      <div class="h3-aboutxt">
-                        <h1>LEYENDA <span>NOSOTROS</span></h1>
+                        <h1> <?php echo $lang['encabezado1'] ?><span><?php echo $lang['encabezado2'] ?></span></h1>
 
-                        <p> We are providing world-wide all kinds of eco frienly services, explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
+                        <p><?php echo $lang['parrafo1'] ?></p>
 
-                        <p> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat. </p>
+                        <p> <?php echo $lang['parrafo2'] ?> </p>
 
-                        <p> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat. </p>
+                        <p> <?php echo $lang['parrafo3'] ?> </p>
                         
-                        <p> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat. </p>
+                        <p> <?php echo $lang['parrafo4'] ?> </p>
                        <!-- <ul class="counter">
                            <li>
                               <p class="counter-count">69000</p>
@@ -158,50 +162,50 @@
                   <div class="row">
                      <div class="col-lg-8">
                         <div class="section-title-2">
-                           <h5>Servicios Generales</h5>
+                           <h5><?php echo $lang['servicios'] ?></h5>
                            <br>
                         </div>
                         <div class="row">
                            <div class="col-6">
                               <div class="eco-box">
                                  <span class="econ-icon"><i class="far fa-handshake"></i></span>
-                                 <h5 > Become a Volunteer </h5>
-                                 <p class="text-dark"> Lorem ipsum dolor amet consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore. </p>
+                                 <h5 > <?php echo $lang['servicio1_titulo'] ?> </h5>
+                                 <p class="text-dark"><?php echo $lang['servicio1'] ?> </p>
                               </div>
                            </div>
                            <div class="col-6">
                               <div class="eco-box">
                                  <span class="econ-icon"><i class="far fa-money-bill-alt"></i></span>
-                                 <h5 > Send Donation </h5>
-                                 <p class="text-dark"> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id. </p>
+                                 <h5 >  <?php echo $lang['servicio2_titulo'] ?></h5>
+                                 <p class="text-dark"> <?php echo $lang['servicio2'] ?> </p>
                               </div>
                            </div>
                            <div class="col-6">
                               <div class="eco-box">
                                  <span class="econ-icon"><i class="fas fa-heart"></i></span>
-                                 <h5 > Affective Causes </h5>
-                                 <p class="text-dark">Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain.</p>
+                                 <h5 >  <?php echo $lang['servicio3_titulo'] ?></h5>
+                                 <p class="text-dark"><?php echo $lang['servicio3'] ?></p>
                               </div>
                            </div>
                            <div class="col-6">
                               <div class="eco-box">
                                  <span class="econ-icon"> <i class="fas fa-coffee"></i> </span>
-                                 <h5 >  Fund Raising </h5>
-                                 <p class="text-dark">Who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences. </p>
+                                 <h5 >  <?php echo $lang['servicio4_titulo'] ?> </h5>
+                                 <p class="text-dark"><?php echo $lang['servicio4'] ?></p>
                               </div>
                            </div>
                            <div class="col-6">
                               <div class="eco-box">
                                  <span class="econ-icon"> <i class="fas fa-coffee"></i> </span>
-                                 <h5 >  Fund Raising </h5>
-                                 <p class="text-dark">Who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences. </p>
+                                 <h5 > <?php echo $lang['servicio5_titulo'] ?>  </h5>
+                                 <p class="text-dark"> <?php echo $lang['servicio5'] ?></p>
                               </div>
                            </div>
                            <div class="col-6">
                               <div class="eco-box">
                                  <span class="econ-icon"> <i class="fas fa-coffee"></i> </span>
-                                 <h5 >  Fund Raising </h5>
-                                 <p class="text-dark">Who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences. </p>
+                                 <h5 > <?php echo $lang['servicio6_titulo'] ?>  </h5>
+                                 <p class="text-dark"> <?php echo $lang['servicio6'] ?></p>
                               </div>
                            </div>
                         </div>
