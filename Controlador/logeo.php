@@ -38,7 +38,7 @@ if(($_POST["btn_entrar"])  && ($email!="") && ($pass!=""))
 
 			//***** ACCESOS *****//
 			if($cargo=="ADMIN_CONTROLADOR"){
-				header("location:ADM/dashboard.php");
+				header("location:ADM/listaUsuarios.php");
 			}else{
 				//*****REDIRECCION A INDEX DE DATOS INCORRECTOS*****//
 				echo"<script type=\"text/javascript\">alert('Datos Incorrectos'); window.location='login_log.php';</script>";
