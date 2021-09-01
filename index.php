@@ -25,20 +25,21 @@
       <div class="wrapper home2">
         
          <?php include("navegacion.php");?>
-         <div id="search">
-            <button type="button" class="close">×</button>
-            <form class="search-overlay-form">
-               <input type="search" value="" placeholder="type keyword(s) here" />
-               <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
-            </form>
-         </div>
+
          <!--Header End--> 
          <!--Slider Start-->
          <section id="home-slider" class="owl-carousel owl-theme wf100">
+            <?php 
+            $x=0;
+
+            while ($x <=3) {
+               
+            
+            ?>
             <div class="item">
                <div class="slider-caption h2slider">
                   <div class="container">
-                     <strong>Ecova<span> IMAGEN 1</span></strong>
+                     <strong>Ecova<span> IMAGEN <?PHP ECHO $x?></span></strong>
                      <h1>Eco Friendly</h1>
                      <p>Nonprofit WordPress Theme</p>
                      <!--<a href="#" class="active">Find Out More</a> <a href="#">Join us Now</a> -->
@@ -46,13 +47,17 @@
                </div>
                <img src="images/h2-slide1.jpg" alt=""> 
             </div>
-            <div class="item">
+            <?php 
+               $x=$x+1;
+            } //CIERRA WHILE DE SLIDER
+            ?>
+            <!--<div class="item">
                <div class="slider-caption h2slider">
                   <div class="container">
                      <strong><span>Please</span> IMAGEN 2 </strong>
                      <h1>Save WildLife</h1>
                      <p>of <strong>endangered animals</strong> in the world</p>
-                     <!--<a href="#" class="active">Find Out More</a> <a href="#">Join us Now</a> -->
+                    
                   </div>
                </div>
                <img src="images/h2-slide2.jpg" alt=""> 
@@ -63,11 +68,11 @@
                      <strong>Save <span> IMAGEN 3</span> partner</strong>
                      <h1>Water Resource</h1>
                      <p>Before <strong>it’s too late</strong> for us...</p>
-                     <!--<a href="#" class="active">Find Out More</a> <a href="#">Join us Now</a> -->
+                     
                   </div>
                </div>
                <img src="images/h2-slide3.jpg" alt=""> 
-            </div>
+            </div>-->
          </section>
          <!--Slider End--> 
          <!--Service Area Start-->
