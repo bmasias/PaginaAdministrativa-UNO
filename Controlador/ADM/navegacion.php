@@ -14,16 +14,59 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="dashboard.php">
+        <a class="nav-link" href="listaUsuarios.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+          <span>Lista Usuarios</span></a>
+      </li>
+       <!-- Divider -->
+    <hr class="sidebar-divider">
+    <!-- Heading -->
+    <div class="sidebar-heading">
+      HOME
+    </div>
+      <li class="nav-item">
+        <a class="nav-link" href="listaCCosto.php">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>SLIDER HOME</span></a>
+      </li>
+      <!-- Heading -->
+    <hr class="sidebar-divider">
+    <div class="sidebar-heading">
+      NOSOTROS
+    </div>
+      <li class="nav-item">
+        <a class="nav-link" href="listaCCosto.php">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>NOSOTROS</span></a>
       </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+     <li class="nav-item">
+        <a class="nav-link" href="listaCCosto.php">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>SERVICIOS GENERALES</span></a>
+      </li>
+    <hr class="sidebar-divider">
+    <div class="sidebar-heading">
+      SERVICIOS
+    </div>
+     <li class="nav-item">
+        <a class="nav-link" href="listaCCosto.php">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>ESPECIES</span></a>
+      </li>
 
-      <!-- Heading -->
+      <li class="nav-item">
+        <a class="nav-link" href="listaCCosto.php">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>SERVICIOS POR ESPECIES</span></a>
+      </li>
 
+      <li class="nav-item">
+        <a class="nav-link" href="listaCCosto.php">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>SERVICIOS EN TERRENO</span></a>
+      </li>
+    <hr class="sidebar-divider">
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRecepcion" aria-expanded="true" aria-controls="collapseDespacho">
@@ -45,11 +88,7 @@
  
 
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        MAESTROS
-      </div>
-
+      
 
 
       <li class="nav-item">
