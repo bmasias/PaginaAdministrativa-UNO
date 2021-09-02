@@ -65,7 +65,7 @@
                       <th>Texto Destacado</th>
                       <th>Parrafo</th>
                       <th>Ver</th>
-                      <th>Editar</th>
+                      <!--<th>Editar</th>-->
                       <th>Eliminar</th>
                     </tr>
                   </thead>
@@ -78,9 +78,9 @@
                       <td><?php echo $ver['titulo'];?></td>
                       <td><?php echo $ver['subtitulo'];?></td>
                       <td><?php echo $ver['parrafo'];?></td>
-                      <td>VER</td>
-                      <td>EDITAR</td>
-                      <td>ELIMINAR</td>
+                      <td><a href="SliderHome/EditarUser.php?id=<?php echo $ver["id"];?>"><img src="../img/ojo.png"></td>
+                      <!--<td><a href="SliderHome/EditarSlider.php?id=<?php echo $ver["id"];?>"><img src="../img/edi.png"></a></td>-->
+                      <td><a href="SliderHome/EliminarSlider.php?id=<?php echo $ver["id"];?>" onclick="return confirm('Confirma que deseas borrar este registro.');"><img src="../img/eli.png"></a></td>
                     </tr>
                   <?php }//cierra while?>
                 </table>
