@@ -1785,7 +1785,7 @@ section.services-area ul li.active:after {
 	color: #fff;
 }
 .urgent-causes p {
-	color: #fff;
+	color: black;
 	font-size: 18px;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;

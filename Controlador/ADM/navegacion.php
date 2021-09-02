@@ -42,7 +42,7 @@
       </li>
 
      <li class="nav-item">
-        <a class="nav-link" href="listaCCosto.php">
+        <a class="nav-link" href="listaServiciosGenerales.php">
           <i class="fas fa-fw fa-wrench"></i>
           <span>SERVICIOS GENERALES</span></a>
       </li>

@@ -168,14 +168,21 @@ include ("conexion.php");
                            <br>
                         </div>
                         <div class="row">
+                           <?php 
+                           $select_servicios="SELECT * FROM servicios_generales WHERE estado='Activo'";
+                           $ejecutar_Servicios=mysqli_query($con,$select_servicios);
+                           while($ver_servicios=mysqli_fetch_array($ejecutar_Servicios,$base)){
+                           ?>
                            <div class="col-6">
                               <div class="eco-box">
                                  
-                                 <h5 > <?php echo $lang['servicio1_titulo'] ?> </h5>
-                                 <p class="text-dark"><?php echo $lang['servicio1'] ?> </p>
+                                 <h5 > <?php echo $ver_servicios["titulo"];//$lang['servicio1_titulo'] ?> </h5>
+                                 <!--<p class="text-dark"><?php echo $ver_servicios["parrafo "];//$lang['servicio1'] ?> </p>-->
+                                 <p class="text-dark"><?php echo $ver_servicios["parrafo"];//$lang['servicio1'] ?></p>
                               </div>
                            </div>
-                           <div class="col-6">
+                           <?php }?>
+                           <!--<div class="col-6">
                               <div class="eco-box">
                                  
                                  <h5 >  <?php echo $lang['servicio2_titulo'] ?></h5>
@@ -209,7 +216,7 @@ include ("conexion.php");
                                  <h5 > <?php echo $lang['servicio6_titulo'] ?>  </h5>
                                  <p class="text-dark"> <?php echo $lang['servicio6'] ?></p>
                               </div>
-                           </div>
+                           </div>-->
                         </div>
                      </div>
                      <div class="col-lg-4">
