@@ -1,4 +1,7 @@
-<?php include ("config.php");?>
+<?php 
+include ("config.php");
+include ("conexion.php");
+?>
 
 <!doctype html>
 <html lang="en">
@@ -30,49 +33,36 @@
          <!--Slider Start-->
          <section id="home-slider" class="owl-carousel owl-theme wf100">
             <?php 
-            $x=0;
 
-            while ($x <=3) {
+            $select_slider="SELECT 
+                           titulo
+                           ,subtitulo
+                           ,parrafo
+                           ,imagen
+                           ,SUBSTRING(imagen,INSTR(imagen,'images'),LENGTH(imagen)) as 'IMAGEN_SETEADA'
+                           from slider  
+                           WHERE estado='Activo'";
+            $ejecutar_slider=mysqli_query($con,$select_slider);
+            while ($ver_slider=mysqli_fetch_array($ejecutar_slider,$base)) {
                
-            
             ?>
             <div class="item">
                <div class="slider-caption h2slider">
                   <div class="container">
-                     <strong>Ecova<span> IMAGEN <?PHP ECHO $x?></span></strong>
-                     <h1>Eco Friendly</h1>
-                     <p>Nonprofit WordPress Theme</p>
+                     <strong>AGROFAENAS <span><?PHP echo $ver_slider["titulo"];?></span></strong>
+                     <h1><?PHP echo $ver_slider["subtitulo"];?></h1>
+                     <p><?PHP echo $ver_slider["parrafo"];?></p>
                      <!--<a href="#" class="active">Find Out More</a> <a href="#">Join us Now</a> -->
                   </div>
                </div>
-               <img src="images/h2-slide1.jpg" alt=""> 
+               
+               <img src="<?php echo $ver_slider["IMAGEN_SETEADA"]; ?>" alt=""> 
             </div>
             <?php 
-               $x=$x+1;
+            
             } //CIERRA WHILE DE SLIDER
             ?>
-            <!--<div class="item">
-               <div class="slider-caption h2slider">
-                  <div class="container">
-                     <strong><span>Please</span> IMAGEN 2 </strong>
-                     <h1>Save WildLife</h1>
-                     <p>of <strong>endangered animals</strong> in the world</p>
-                    
-                  </div>
-               </div>
-               <img src="images/h2-slide2.jpg" alt=""> 
-            </div>
-            <div class="item">
-               <div class="slider-caption h2slider">
-                  <div class="container">
-                     <strong>Save <span> IMAGEN 3</span> partner</strong>
-                     <h1>Water Resource</h1>
-                     <p>Before <strong>it’s too late</strong> for us...</p>
-                     
-                  </div>
-               </div>
-               <img src="images/h2-slide3.jpg" alt=""> 
-            </div>-->
+
          </section>
          <!--Slider End--> 
          <!--Service Area Start-->
@@ -173,42 +163,42 @@
                         <div class="row">
                            <div class="col-6">
                               <div class="eco-box">
-                                 <span class="econ-icon"><i class="far fa-handshake"></i></span>
+                                 
                                  <h5 > <?php echo $lang['servicio1_titulo'] ?> </h5>
                                  <p class="text-dark"><?php echo $lang['servicio1'] ?> </p>
                               </div>
                            </div>
                            <div class="col-6">
                               <div class="eco-box">
-                                 <span class="econ-icon"><i class="far fa-money-bill-alt"></i></span>
+                                 
                                  <h5 >  <?php echo $lang['servicio2_titulo'] ?></h5>
                                  <p class="text-dark"> <?php echo $lang['servicio2'] ?> </p>
                               </div>
                            </div>
                            <div class="col-6">
                               <div class="eco-box">
-                                 <span class="econ-icon"><i class="fas fa-heart"></i></span>
+                                 
                                  <h5 >  <?php echo $lang['servicio3_titulo'] ?></h5>
                                  <p class="text-dark"><?php echo $lang['servicio3'] ?></p>
                               </div>
                            </div>
                            <div class="col-6">
                               <div class="eco-box">
-                                 <span class="econ-icon"> <i class="fas fa-coffee"></i> </span>
+                                 
                                  <h5 >  <?php echo $lang['servicio4_titulo'] ?> </h5>
                                  <p class="text-dark"><?php echo $lang['servicio4'] ?></p>
                               </div>
                            </div>
                            <div class="col-6">
                               <div class="eco-box">
-                                 <span class="econ-icon"> <i class="fas fa-coffee"></i> </span>
+                                 
                                  <h5 > <?php echo $lang['servicio5_titulo'] ?>  </h5>
                                  <p class="text-dark"> <?php echo $lang['servicio5'] ?></p>
                               </div>
                            </div>
                            <div class="col-6">
                               <div class="eco-box">
-                                 <span class="econ-icon"> <i class="fas fa-coffee"></i> </span>
+                                 
                                  <h5 > <?php echo $lang['servicio6_titulo'] ?>  </h5>
                                  <p class="text-dark"> <?php echo $lang['servicio6'] ?></p>
                               </div>
@@ -363,8 +353,8 @@
          </section>
          
 
-         <!--InstaGram Start-->
- <div class="partner-logos wf100">
+            <!--InstaGram Start-->
+            <div class="partner-logos wf100">
                <div class="container">
                   <div id="partner-logos" class="owl-carousel owl-theme">
                      <div class="item"><img src="images/plogo1.png" alt=""></div>

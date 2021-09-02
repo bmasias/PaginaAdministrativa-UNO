@@ -25,8 +25,9 @@
       HOME
     </div>
       <li class="nav-item">
-        <a class="nav-link" href="listaCCosto.php">
-          <i class="fas fa-fw fa-wrench"></i>
+        <a class="nav-link" href="listaSlider.php">
+          <i class="far fa-images"></i>
+          
           <span>SLIDER HOME</span></a>
       </li>
       <!-- Heading -->
@@ -36,7 +37,7 @@
     </div>
       <li class="nav-item">
         <a class="nav-link" href="listaCCosto.php">
-          <i class="fas fa-fw fa-wrench"></i>
+          <i class="far fa-file-alt"></i>
           <span>NOSOTROS</span></a>
       </li>
 
