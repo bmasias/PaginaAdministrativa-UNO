@@ -120,15 +120,22 @@ include ("conexion.php");
                <div class="row">
                   <div class="col-md-6">
                      <div class="h3-aboutxt">
-                        <h1> <?php echo $lang['encabezado1'] ?><span><?php echo $lang['encabezado2'] ?></span></h1>
+                        <?php 
+                        $select_nosotros="SELECT 
+                           titulo
+                           ,descripcion
+                           ,imagen
+                           ,SUBSTRING(imagen,INSTR(imagen,'images'),LENGTH(imagen)) as 'IMAGEN_SETEADA'
+                           from nosotros  
+                           WHERE estado='Activo' limit 1";
+                        $ejecutar_nosotros=mysqli_query($con,$select_nosotros);
+                        $ver_nosotros=mysqli_fetch_array($ejecutar_nosotros,$base);
+                        ?>
+                        <h1><span><?php echo $ver_nosotros["titulo"] ?></span></h1>
 
-                        <p><?php echo $lang['parrafo1'] ?></p>
+                        <p><?php echo $ver_nosotros["descripcion"]; //$lang['parrafo1'] ?></p>
 
-                        <p> <?php echo $lang['parrafo2'] ?> </p>
-
-                        <p> <?php echo $lang['parrafo3'] ?> </p>
-                        
-                        <p> <?php echo $lang['parrafo4'] ?> </p>
+                       
                        <!-- <ul class="counter">
                            <li>
                               <p class="counter-count">69000</p>
@@ -145,7 +152,7 @@ include ("conexion.php");
                         </ul>-->
                      </div>
                   </div>
-                  <div class="col-md-6"> <img src="images/h3about.png" alt=""> </div>
+                  <div class="col-md-6"> <img src="<?php echo $ver_nosotros["IMAGEN_SETEADA"]?>" alt=""> </div>
                </div>
             </div>
          </section>

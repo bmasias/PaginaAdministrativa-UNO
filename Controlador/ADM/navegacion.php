@@ -36,7 +36,7 @@
       NOSOTROS
     </div>
       <li class="nav-item">
-        <a class="nav-link" href="listaCCosto.php">
+        <a class="nav-link" href="listaNosotros.php">
           <i class="far fa-file-alt"></i>
           <span>NOSOTROS</span></a>
       </li>
