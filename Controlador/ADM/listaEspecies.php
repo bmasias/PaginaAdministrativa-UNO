@@ -48,10 +48,10 @@
             <div class="card-header py-3">
               <div class="row">
                 <div class="col">
-                  <h6 class="m-0 font-weight-bold text-primary">LISTA SERVICIOS GENERALES</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">LISTA ESPECIES</h6>
                 </div>
                  <div class="col">
-                  <a href="ServiciosGenerales/nuevoServicioGeneral.php" class="btn btn-primary">NUEVO SERVICIO</a>
+                  <a href="Especies/nuevaEspecie.php" class="btn btn-primary">NUEVA ESPECIE</a>
                 </div>
               </div>
               
@@ -61,25 +61,25 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Titulo</th>
-                      
-                      <th>Parrafo</th>
-                      
-                      <th>Editar</th>
+                      <th>especies</th>
+                      <th>Imagen Primaria</th>
+                      <th>Imagen Detalle</th>
+                     
                       <th>Eliminar</th>
                     </tr>
                   </thead>
                   <?php 
-                    $listar="SELECT * FROM servicios_generales WHERE estado='Activo'";
+                    $listar="SELECT * FROM especies WHERE estado='Activo'";
                     $ejecutar=mysqli_query($con,$listar);
                     while($ver=mysqli_fetch_array($ejecutar,$base)){ 
                   ?>
                     <tr>
-                      <td><?php echo $ver['titulo'];?></td>
-                      <td><?php echo $ver['parrafo'];?></td>
-                     
-                      <td><a href="ServiciosGenerales/EditarServiciosGenerales.php?id=<?php echo $ver["id"];?>"><img src="../img/edi.png"></a></td>
-                      <td><a href="ServiciosGenerales/EliminarServicio.php?id=<?php echo $ver["id"];?>" onclick="return confirm('Confirma que deseas borrar este registro.');"><img src="../img/eli.png"></a></td>
+                      <td><?php echo $ver['especie'];?></td>
+                      
+                     <td><a href="Especies/CargarImagenPrimaria.php?id=<?php echo $ver["id"];?>"><img src="../img/img.png"></a></td>
+                     <td><a href="Nosotros/CargarImagenDetalle.php?id=<?php echo $ver["id"];?>"><img src="../img/img.png"></a></td>
+                      
+                      <td><a href="Especies/EliminarServicio.php?id=<?php echo $ver["id"];?>" onclick="return confirm('Confirma que deseas borrar este registro.');"><img src="../img/eli.png"></a></td>
                     </tr>
                   <?php }//cierra while?>
                 </table>

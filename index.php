@@ -258,54 +258,22 @@ include ("conexion.php");
                   
                </div>
                <div class="row">
-                     <!--Image Box Start-->
+                     <?php 
+                     $select_especies="SELECT id , especie,
+                     SUBSTRING(imagen1,INSTR(imagen1,'images'),LENGTH(imagen1)) as 'IMAGEN1',
+                     SUBSTRING(imagen_cabezera_detalle,INSTR(imagen_cabezera_detalle,'images'),LENGTH(imagen_cabezera_detalle)) as 'IMAGEN_SETEADA' 
+                     FROM especies
+                     where estado='Activo'";
+                     $ejecutar_especies=mysqli_query($con,$select_especies);
+                     while($ver_especie=mysqli_fetch_array($ejecutar_especies,$base)){
+                     ?>
                      <div class="col-md-4 col-sm-4">
                         <div class="gallery-img">
                            <a href="detalle-especie.php"><i class="fas fa-search"></i></a>
-                           <img src="images/NUEVAS/cerezas.jpg" alt="">
+                           <img src="<?php echo $ver_especie["IMAGEN1"];?>" alt="">
                         </div>
                      </div>
-                     <!--Image Box End-->
-                     <!--Image Box Start-->
-                     <div class="col-md-4 col-sm-4">
-                        <div class="gallery-img">
-                           <a href="images/gallery/sgall2.jpg" data-rel="prettyPhoto[gallery1]"><i class="fas fa-search"></i></a>
-                           <img src="images/gallery/sgall2.jpg" alt="">
-                        </div>
-                     </div>
-                     <!--Image Box End--> 
-                     <!--Image Box Start-->
-                     <div class="col-md-4 col-sm-4">
-                        <div class="gallery-img">
-                           <a href="images/gallery/sgall3.jpg" data-rel="prettyPhoto[gallery1]"><i class="fas fa-search"></i></a>
-                           <img src="images/gallery/sgall3.jpg" alt="">
-                        </div>
-                     </div>
-                     <!--Image Box End-->
-                     <!--Image Box Start-->
-                     <div class="col-md-4 col-sm-4">
-                        <div class="gallery-img">
-                           <a href="images/gallery/sgall4.jpg" data-rel="prettyPhoto[gallery1]"><i class="fas fa-search"></i></a>
-                           <img src="images/gallery/sgall4.jpg" alt="">
-                        </div>
-                     </div>
-                     <!--Image Box End-->
-                     <!--Image Box Start-->
-                     <div class="col-md-4 col-sm-4">
-                        <div class="gallery-img">
-                           <a href="images/gallery/sgall5.jpg" data-rel="prettyPhoto[gallery1]"><i class="fas fa-search"></i></a>
-                           <img src="images/gallery/sgall5.jpg" alt="">
-                        </div>
-                     </div>
-                     <!--Image Box End--> 
-                     <!--Image Box Start-->
-                     <div class="col-md-4 col-sm-4">
-                        <div class="gallery-img">
-                           <a href="images/gallery/sgall6.jpg" data-rel="prettyPhoto[gallery1]"><i class="fas fa-search"></i></a>
-                           <img src="images/gallery/sgall6.jpg" alt="">
-                        </div>
-                     </div>
-                     <!--Image Box End--> 
+                     <?php }?>
                   </div>
                </div>
             </div>

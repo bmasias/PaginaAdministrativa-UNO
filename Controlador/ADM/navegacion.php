@@ -51,7 +51,7 @@
       SERVICIOS
     </div>
      <li class="nav-item">
-        <a class="nav-link" href="listaCCosto.php">
+        <a class="nav-link" href="listaEspecies.php">
           <i class="fas fa-fw fa-wrench"></i>
           <span>ESPECIES</span></a>
       </li>

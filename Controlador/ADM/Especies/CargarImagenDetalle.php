@@ -4,12 +4,12 @@
   session_start();
   if ($_SESSION["estado"] == "LOGEADO"){ 
 
-     $idNosotros = $_GET['id'];
-    $sql = "SELECT * FROM nosotros WHERE estado='Activo' AND  id='$idNosotros'";
+     $idEspecie = $_GET['id'];
+    $sql = "SELECT * FROM especies WHERE estado='Activo' AND  id='$idEspecie'";
                 $resultado=mysqli_query($con,$sql);
                 $rs=mysqli_fetch_array($resultado,$base);
 
-                  $idNosotros=$rs['id'];
+                  $idEspecie=$rs['id'];
                   
 ?>
 
@@ -39,27 +39,27 @@
                 <h1 class="h4 text-gray-900 mb-4">SUBIR IMAGEN</h1>
               </div>
               <form class="user" method="POST" action="cargarImagen.php" enctype="multipart/form-data" autocomplete="off">
-                <input type="text" name="txt_id" hidden="" readonly="" value="<?php echo "$idNosotros" ?>">
+                <input type="text" name="txt_id" hidden="" readonly="" value="<?php echo "$idEspecie" ?>">
                 <div class="col-sm-12 mb-3 mb-sm-0">
                       <input type="file" class="form-control" id="archivo" name="archivo">
                   </div>
                   <br>
                 <input type="submit" name="BTN_INGRESAR" value="REGISTRAR IMAGEN" class="btn btn-primary btn-user btn-block">
                 <hr>
-                <a href="../listaNosotros.php" class="btn btn-dark btn-user btn-block">VOLVER</a>
+                <a href="../listaEspecies.php" class="btn btn-dark btn-user btn-block">VOLVER</a>
               </form>
             </div>
           </div>
               <?php 
 
     if ($_POST["BTN_INGRESAR"]) {
-        $idSlider=$_POST["txt_id"];
+        $idEspecie=$_POST["txt_id"];
         $foto=$_FILES["archivo"]["name"];
         $ruta=$_FILES["archivo"]["tmp_name"];
         $destino="../../../images/NUEVAS/".$foto;
         copy($ruta,$destino);
         
-        $update="UPDATE nosotros SET imagen='$destino' WHERE id='$idSlider'";
+        $update="UPDATE especies SET imagen_cabezera_detalle='$destino' WHERE id='$idEspecie'";
         $ejecutar=mysqli_query($con,$update);
         
         echo "<img src='$destino' class='img-fluid' alt='Responsive image'>";
