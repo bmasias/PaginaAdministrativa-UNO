@@ -9,17 +9,17 @@
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                      <li class="nav-item"> <a class="nav-link" href="index.php">INICIO</a> </li>
-                     <li class="nav-item"> <a class="nav-link" href="#NOSOTROS">NOSOTROS</a> </li>
+                     <li class="nav-item"> <a class="nav-link" href="index.php#NOSOTROS">NOSOTROS</a> </li>
                      <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="index-2.html"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> SERVICIOS </a>
                         <ul class="dropdown-menu" >
-                           <li><a href="#Servicios-Generales">Servicios Generales</a></li>
-                           <li><a href="#Servicios-Especies">Servicios por Especies</a></li>
-                           <li><a href="#Servicios-Terreno">Servicios en Terreno</a></li>
+                           <li><a href="index.php#Servicios-Generales">Servicios Generales</a></li>
+                           <li><a href="index.php#Servicios-Especies">Servicios por Especies</a></li>
+                           <li><a href="index.php#Servicios-Terreno">Servicios en Terreno</a></li>
                         </ul>
                      </li>
 
-                     <li class="nav-item"> <a class="nav-link" href="#">GALERIA</a> </li>
+                     <li class="nav-item"> <a class="nav-link" href="galeria_imagenes.php">GALERIA</a> </li>
                      <li class="nav-item"> <a class="nav-link" href="#">CONTACTO</a> </li>
  
                   </ul>

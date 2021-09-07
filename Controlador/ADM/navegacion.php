@@ -70,7 +70,7 @@
       </li>
       <hr class="sidebar-divider">
       <li class="nav-item">
-        <a class="nav-link" href="listaCCosto.php">
+        <a class="nav-link" href="listaImagenes.php">
          <i class="far fa-images"></i>
           <span>GALERIA</span></a>
       </li>
