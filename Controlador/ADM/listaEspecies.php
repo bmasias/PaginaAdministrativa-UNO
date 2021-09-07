@@ -77,9 +77,9 @@
                       <td><?php echo $ver['especie'];?></td>
                       
                      <td><a href="Especies/CargarImagenPrimaria.php?id=<?php echo $ver["id"];?>"><img src="../img/img.png"></a></td>
-                     <td><a href="Nosotros/CargarImagenDetalle.php?id=<?php echo $ver["id"];?>"><img src="../img/img.png"></a></td>
+                     <td><a href="Especies/CargarImagenDetalle.php?id=<?php echo $ver["id"];?>"><img src="../img/img.png"></a></td>
                       
-                      <td><a href="Especies/EliminarServicio.php?id=<?php echo $ver["id"];?>" onclick="return confirm('Confirma que deseas borrar este registro.');"><img src="../img/eli.png"></a></td>
+                      <td><a href="Especies/EliminarEspecie.php?id=<?php echo $ver["id"];?>" onclick="return confirm('Confirma que deseas borrar este registro.');"><img src="../img/eli.png"></a></td>
                     </tr>
                   <?php }//cierra while?>
                 </table>
