@@ -7,7 +7,7 @@
                         <div class="footer-widget">
                            <h4>SOBRE LA EMPRESA</h4>
                            <p> If anything’s hot in today’s economy, it’s saving money, including a broad range of green businesses helping people save energy, water, and other resources. Definitely, you can go with this business as it is a nothing but the future. </p>
-                           <a href="#" class="lm">NOSOTROS</a> 
+                           <a href="#NOSOTROS" class="lm">NOSOTROS</a> 
                         </div>
                         <!--Footer Widget End--> 
                      </div>

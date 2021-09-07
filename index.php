@@ -291,44 +291,60 @@ include ("conexion.php");
                         <br>
                      </div>
                   </div>
-                  <div class="col-md-6"> <a href="#" class="btn btn-success">VER TODOS</a> </div>
+                 <!-- <div class="col-md-6"> <a href="#" class="btn btn-success">VER TODOS</a> </div>-->
                </div>
                <div class="row">
                   <div class="col-md-6">
+                     <?php 
+
+                      $select_terreno="SELECT 
+                              MAX(id) AS 'IDTerreno'
+                              ,titulo 
+                              ,SUBSTRING(imagen,INSTR(imagen,'images'),LENGTH(imagen)) as 'IMAGEN_SETEADA'
+                              FROM servicios_terreno 
+                              WHERE destacado='SI' AND estado='Activo' LIMIT 1";
+                     $ejecutar_terreno=mysqli_query($con,$select_terreno);
+                     $ver_terreno=mysqli_fetch_array($ejecutar_terreno,$base);
+                     ?>
                      <div class="blog-post-large">
-                        <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/h2news1.jpg" alt=""></div>
+                        <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="<?php echo $ver_terreno["IMAGEN_SETEADA"]?>" alt=""></div>
                         <div class="post-txt">
-                           <ul class="post-meta">
+                           <!--<ul class="post-meta">
                               <li><i class="fas fa-calendar-alt"></i> 29 September, 2018</li>
                               <li><i class="fas fa-comments"></i> 134 Comments</li>
-                           </ul>
-                           <h5><a href="#">Planting Trees for Better Future</a></h5>
+                           </ul>-->
+                           <h5><a href="#"><?php echo $ver_terreno["titulo"];?></a></h5>
                         </div>
                      </div>
                   </div>
                   <div class="col-md-6">
+
+                     <?PHP 
+                        $top_2_terreno="SELECT 
+                                    id
+                                    ,titulo
+                                    ,parrafo
+                                    ,destacado
+                                    ,SUBSTRING(imagen,INSTR(imagen,'images'),LENGTH(imagen)) as 'IMAGEN_SETEADA'
+                                    FROM servicios_terreno
+                                    WHERE estado='Activo' AND destacado='NO'
+                                    ORDER BY id DESC
+                                    LIMIT 2";
+                         $ejecutar_top_2=mysqli_query($con,$top_2_terreno);
+                        while($ver_top2=mysqli_fetch_array($ejecutar_top_2,$base)){
+                     ?>
                      <!--Blog Small Post Start-->
                      <div class="blog-small-post">
-                        <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/h2news2.jpg" alt=""> </div>
+                        <div class="post-thumb"> <a href="#"></a> <img src="<?php echo $ver_top2["IMAGEN_SETEADA"]?>" alt=""> </div>
                         <div class="post-txt">
-                           <span class="pdate"> <i class="fas fa-calendar-alt"></i> 29 September, 2018</span>
-                           <h5><a href="#">How you can keep alive wildlife long.</a></h5>
-                           <p>According to a survey the perceived higher cost of environmentally.</p>
-                           <a href="#" class="rm">Read More</a> 
+                          
+                           <h5><a href="#"><?php echo $ver_top2["titulo"] ?></a></h5>
+                           <p><?php echo $ver_top2["parrafo"] ?></p>
+                           
                         </div>
                      </div>
                      <!--Blog Small Post End--> 
-                     <!--Blog Small Post Start-->
-                     <div class="blog-small-post">
-                        <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/h2news3.jpg" alt=""> </div>
-                        <div class="post-txt">
-                           <span class="pdate"> <i class="fas fa-calendar-alt"></i> 29 September, 2018</span>
-                           <h5><a href="#">The effort GoGreen has been felt across</a></h5>
-                           <p>Majority have suffered alteration in some form by injected humour.</p>
-                           <a href="#" class="rm">Read More</a> 
-                        </div>
-                     </div>
-                     <!--Blog Small Post End--> 
+                     <?php }?>
                   </div>
                </div>
             </div>

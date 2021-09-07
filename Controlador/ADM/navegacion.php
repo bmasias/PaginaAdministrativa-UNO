@@ -12,14 +12,7 @@
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
 
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link" href="listaUsuarios.php">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Lista Usuarios</span></a>
-      </li>
-       <!-- Divider -->
-    <hr class="sidebar-divider">
+      
     <!-- Heading -->
     <div class="sidebar-heading">
       HOME
@@ -43,7 +36,7 @@
 
      <li class="nav-item">
         <a class="nav-link" href="listaServiciosGenerales.php">
-          <i class="fas fa-fw fa-wrench"></i>
+          <i class="fab fa-buffer"></i>
           <span>SERVICIOS GENERALES</span></a>
       </li>
     <hr class="sidebar-divider">
@@ -52,54 +45,42 @@
     </div>
      <li class="nav-item">
         <a class="nav-link" href="listaEspecies.php">
-          <i class="fas fa-fw fa-wrench"></i>
+          <i class="fas fa-apple-alt"></i>
           <span>ESPECIES</span></a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" href="listaDetallexEspecie.php">
-          <i class="fas fa-fw fa-wrench"></i>
+          <i class="fas fa-fan"></i>
           <span>SERVICIOS POR ESPECIES</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="listaCCosto.php">
+        <a class="nav-link" href="listaServiciosTerreno.php">
           <i class="fas fa-fw fa-wrench"></i>
           <span>SERVICIOS EN TERRENO</span></a>
       </li>
     <hr class="sidebar-divider">
       <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRecepcion" aria-expanded="true" aria-controls="collapseDespacho">
-          <i class="fas fa-briefcase"></i>
-          <span>REPORTES</span>
-        </a>
-        <div id="collapseRecepcion" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">FUNCIONES:</h6>
-            <a class="collapse-item" href="listaRecepcionDiaria.php">Bodega de Recepción </a>
-            <a class="collapse-item" href="listaRecepciones.php">Historial Recepción</a>
-            
-          </div>
-        </div>
-      </li>
-
-
-
- 
-
-
       
-
-
       <li class="nav-item">
         <a class="nav-link" href="listaCCosto.php">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Centro Costo</span></a>
+          <i class="fas fa-chalkboard-teacher"></i>
+          <span>CLIENTES</span></a>
+      </li>
+      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link" href="listaCCosto.php">
+         <i class="far fa-images"></i>
+          <span>GALERIA</span></a>
+      </li>
+      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link" href="listaCCosto.php">
+          <i class="fas fa-address-card"></i>
+          <span>CONTACTO</span></a>
       </li>
       
-
-
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
