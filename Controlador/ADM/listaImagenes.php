@@ -45,7 +45,7 @@
         <div class="container-fluid">
         <!-- DataTales Example -->
           <div class="card shadow mb-4">
-            <div class="card-header py-3">
+            <div class="card-header py-2">
               <div class="row">
                 <div class="col">
                   <h6 class="m-0 font-weight-bold text-primary">GALERIA DE IMAGENES</h6>
@@ -59,18 +59,19 @@
             <div class="card-body">
               <div class="row">
                 <?php 
-                $x=0;
-
-                while($x <=3){
+                  $select="SELECT id,SUBSTRING(imagen,INSTR(imagen,'images'),LENGTH(imagen)) as 'IMAGEN1' FROM galeria WHERE estado='Activo'";
+                  $ejecutar=mysqli_query($con,$select);
+                  while ($img=mysqli_fetch_array($ejecutar,$base)) {
                 ?>
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                   <div class="card">
-                    <div class="card-body">
-                      <img src="..." class="img-fluid" alt="...">
-                    </div>
+
+                      <a href="Galeria/EliminarImagen.php?id=<?php echo $img["id"];?>" style="text-align: center" onclick="return confirm('Confirma que deseas borrar este registro.');">
+                        <img src="../../<?php echo $img["IMAGEN1"]?>" class="img-fluid" alt="...">
+                      </a>
                   </div>
                 </div>
-                <?php echo "<br><br>"; $x=$x+1;}?>
+                <?php   }?>
               </div>
             </div>
           </div>

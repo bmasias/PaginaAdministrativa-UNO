@@ -27,20 +27,7 @@ include ("conexion.php");
       <div class="wrapper">
          <!--Header Start-->
       <?php include("navegacion.php");?>
-         
-         <!--Header End-->
-         <!--Inner Header Start-->
-         <section class="wf100 p100 inner-header">
-            <div class="container">
-               <h1>Gallery</h1>
-               <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#"> Gallery </a></li>
-                  <li><a href="#"> Gallery Grid</a></li>
-               </ul>
-            </div>
-         </section>
-         <!--Inner Header End--> 
+ 
          <!--Contact Start-->
          <div class="gallery wf100 p80">
             <div class="container">
