@@ -64,7 +64,7 @@
       <!-- Nav Item - Utilities Collapse Menu -->
       
       <li class="nav-item">
-        <a class="nav-link" href="listaCCosto.php">
+        <a class="nav-link" href="listaClientes.php">
           <i class="fas fa-chalkboard-teacher"></i>
           <span>CLIENTES</span></a>
       </li>

@@ -355,16 +355,20 @@ include ("conexion.php");
             <div class="partner-logos wf100">
                <div class="container">
                   <div id="partner-logos" class="owl-carousel owl-theme">
-                     <div class="item"><img src="images/plogo1.png" alt=""></div>
-                     <div class="item"><img src="images/plogo2.png" alt=""></div>
-                     <div class="item"><img src="images/plogo3.png" alt=""></div>
-                     <div class="item"><img src="images/plogo4.png" alt=""></div>
-                     <div class="item"><img src="images/plogo5.png" alt=""></div>
-                     <div class="item"><img src="images/plogo1.png" alt=""></div>
-                     <div class="item"><img src="images/plogo2.png" alt=""></div>
-                     <div class="item"><img src="images/plogo3.png" alt=""></div>
-                     <div class="item"><img src="images/plogo4.png" alt=""></div>
-                     <div class="item"><img src="images/plogo5.png" alt=""></div>
+                     <?PHP 
+                     $SELECT_CLIENTES="SELECT 
+                                    id
+                                    ,nombre
+                                    ,SUBSTRING(imagen,INSTR(imagen,'images'),LENGTH(imagen)) as 'IMAGEN_SETEADA'
+                                    FROM clientes
+                                    WHERE estado='Activo'";
+                      $ejecutar_CLIENTE=mysqli_query($con,$SELECT_CLIENTES);
+                     while($ver_cliente=mysqli_fetch_array($ejecutar_CLIENTE,$base)){
+
+                     ?>
+                     <div class="item"><img src="<?php echo $ver_cliente["IMAGEN_SETEADA"]?>" alt=""></div>
+                     <?PHP }?>
+                     
                   </div>
                </div>
             </div>
