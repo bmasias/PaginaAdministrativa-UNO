@@ -269,7 +269,7 @@ include ("conexion.php");
                      ?>
                      <div class="col-md-4 col-sm-4">
                         <div class="gallery-img">
-                           <a href="detalle-especie.php"><i class="fas fa-search"></i></a>
+                           <a href="detalle-especie.php?especie=<?php echo $ver_especie["especie"];?>"><i class="fas fa-search"></i></a>
                            <img src="<?php echo $ver_especie["IMAGEN1"];?>" alt="">
                         </div>
                      </div>

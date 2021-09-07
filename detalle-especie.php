@@ -1,3 +1,14 @@
+
+<?php 
+include ("conexion.php");
+
+$IDESPECIE = $_GET['especie'];
+    $sql = "SELECT * FROM detalle_especies WHERE estado='Activo' AND  especie='$IDESPECIE'";
+                $resultado=mysqli_query($con,$sql);
+                $rs=mysqli_fetch_array($resultado,$base);
+
+
+?>
 <!doctype html>
 <html lang="en">
    
@@ -23,23 +34,20 @@
       <div class="wrapper">
          <!--Header Start-->
          <?php include("navegacion.php")?>
-         <div id="search">
-            <button type="button" class="close">×</button>
-            <form class="search-overlay-form">
-               <input type="search" value="" placeholder="type keyword(s) here" />
-               <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
-            </form>
-         </div>
-         <!--Header End-->
+         
          <?php 
-            $imagen="images/NUEVAS/cerezas-detalle.jpg";
+            $sql_imagen = "SELECT SUBSTRING(imagen_cabezera_detalle,INSTR(imagen_cabezera_detalle,'images'),LENGTH(imagen_cabezera_detalle)) as 'IMAGEN_SETEADA'  FROM especies WHERE estado='Activo' AND  especie='$IDESPECIE'";
+                $resultado_imagen=mysqli_query($con,$sql_imagen);
+                $rs_imagen=mysqli_fetch_array($resultado_imagen,$base);
+
+            $imagen=$rs_imagen["IMAGEN_SETEADA"];
 
          ?>
          <!--Inner Header Start-->
          <section class="wf100 p100 inner-header" 
          style="background: url(<?php echo $imagen ?>) no-repeat;">
             <div class="container">
-               <h1>DETALLE ESPECIE</h1>
+               <h1>DETALLE ESPECIE <?php echo $rs["especie"];?></h1>
                
             </div>
          </section>
@@ -50,61 +58,26 @@
                <div class="container">
                   <div class="row">
                      <div class="col-lg-12 col-md-12">
+                        <?PHP 
+                            $sql_DETALLE = "SELECT 
+                                 titulo
+                                 ,descripcion
+                                 ,texto_destacado
+                                 ,SUBSTRING(imagen,INSTR(imagen,'images'),LENGTH(imagen)) as 'IMAGEN_SETEADA' FROM detalle_especies WHERE estado='Activo' AND  especie='$IDESPECIE'";
+                            $resultado_detalle=mysqli_query($con,$sql_DETALLE);
+                            while($rs_detalle=mysqli_fetch_array($resultado_detalle,$base)){
+                        ?>
                         <!--Event Box Start-->
                         <div class="event-list-box">
-                           <div class="event-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/event/els2-1.jpg" alt=""> </div>
-
+                            <div class="event-thumb"><a href="#"></a> <img src="<?PHP echo $rs_detalle["IMAGEN_SETEADA"]; ?>" alt=""> 
+                            </div>
                            <div class="event-txt">
-                              <h4> <a href="#">Awareness Campaign to Save & Planting Forest</a> </h4>
-                              <p>The environment includes; the surface of the earth, natural re­sources, land and water.</p>
-                              <a href="#" class="attbtn">Attend Event</a> 
+                              <h4> <a href="#"><?php echo $rs_detalle["titulo"]; ?></a> </h4>
+                              <p><?php echo $rs_detalle["descripcion"]; ?></p>
+                              <a href="#" class="attbtn"><?php echo $rs_detalle["texto_destacado"]; ?></a> 
                            </div>
                         </div>
-                        <!--Event Box End-->
-                        <!--Event Box Start-->
-                        <div class="event-list-box">
-                           <div class="event-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/event/els2-2.jpg" alt=""> </div>
-                           
-                           <div class="event-txt">
-                              <h4> <a href="#">Awareness Campaign to Save & Planting Forest</a> </h4>
-                              <p>The environment includes; the surface of the earth, natural re­sources, land and water.</p>
-                              <a href="#" class="attbtn">Attend Event</a> 
-                           </div>
-                        </div>
-                        <!--Event Box End--> 
-                        <!--Event Box Start-->
-                        <div class="event-list-box">
-                           <div class="event-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/event/els2-3.jpg" alt=""> </div>
-                          
-                           <div class="event-txt">
-                              <h4> <a href="#">Awareness Campaign to Save & Planting Forest</a> </h4>
-                              <p>The environment includes; the surface of the earth, natural re­sources, land and water.</p>
-                              <a href="#" class="attbtn">Attend Event</a> 
-                           </div>
-                        </div>
-                        <!--Event Box End-->
-                        <!--Event Box Start-->
-                        <div class="event-list-box">
-                           <div class="event-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/event/els2-4.jpg" alt=""> </div>
-                           
-                           <div class="event-txt">
-                              <h4> <a href="#">Awareness Campaign to Save & Planting Forest</a> </h4>
-                              <p>The environment includes; the surface of the earth, natural re­sources, land and water.</p>
-                              <a href="#" class="attbtn">Attend Event</a> 
-                           </div>
-                        </div>
-                        <!--Event Box End--> 
-                        <!--Event Box Start-->
-                        <div class="event-list-box">
-                           <div class="event-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="images/event/els2-5.jpg" alt=""> </div>
-                           
-                           <div class="event-txt">
-                              <h4> <a href="#">Awareness Campaign to Save & Planting Forest</a> </h4>
-                              <p>The environment includes; the surface of the earth, natural re­sources, land and water.</p>
-                              <a href="#" class="attbtn">Attend Event</a> 
-                           </div>
-                        </div>
-                        <!--Event Box End--> 
+                        <?PHP }?>
                      </div>
 
                      <!-- PUBLICIDAD SI PUEDEN COLOCAR-->
