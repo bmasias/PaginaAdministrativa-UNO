@@ -175,7 +175,7 @@ include ("conexion.php");
                               <h3>CONTACTANOS</h3>
                            </div>
                            <ul>
-                              <form>
+                              <form action="index.php" method="POST">
                               <li>
                                  <input type="text" class="form-control" placeholder="Ingrese Nombre" aria-label="Ingrese Nombre">
                               </li>
@@ -324,6 +324,10 @@ include ("conexion.php");
                   </div>
                </div>
             </div>
+
+
+
+
          <!--InstaGram End--> 
          <!--Footer Start-->
          <?php include("footer.php");?>
