@@ -20,7 +20,7 @@
                      </li>
 
                      <li class="nav-item"> <a class="nav-link" href="galeria_imagenes.php">GALERIA</a> </li>
-                     <li class="nav-item"> <a class="nav-link" href="#">CONTACTO</a> </li>
+                     <li class="nav-item"> <a class="nav-link" href="contacto.php">CONTACTO</a> </li>
  
                   </ul>
                   <div class="idiomas">

@@ -76,7 +76,7 @@
       </li>
       <hr class="sidebar-divider">
       <li class="nav-item">
-        <a class="nav-link" href="listaCCosto.php">
+        <a class="nav-link" href="listaContacto.php">
           <i class="fas fa-address-card"></i>
           <span>CONTACTO</span></a>
       </li>
