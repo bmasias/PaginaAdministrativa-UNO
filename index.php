@@ -64,57 +64,7 @@ include ("conexion.php");
             ?>
 
          </section>
-         <!--Slider End--> 
-         <!--Service Area Start-->
-         <!--<section class="services-area wf100">
-            <div class="container">
-               <ul>
 
-                  <li>
-                     <div class="sinfo">
-                        <img src="images/sericon1.png" alt="">
-                        <h6>Recycling</h6>
-                        <p>Waste Management</p>
-                     </div>
-                  </li>
-
-                  <li>
-                     <div class="sinfo">
-                        <img src="images/sericon2.png" alt="">
-                        <h6>Wind Energy</h6>
-                        <p>Polar, Prevailing, Tropical</p>
-                     </div>
-                  </li>
-
-                  <li>
-                     <div class="sinfo">
-                        <img src="images/sericon3.png" alt="">
-                        <h6>Pure Water</h6>
-                        <p>Save Water Resources</p>
-                     </div>
-                  </li>
-
-                  <li class="active">
-                     <div class="sinfo">
-                        <img src="images/sericon4.png" alt="">
-                        <h6>Solar Panels</h6>
-                        <p>Save Natural Engery</p>
-                     </div>
-                  </li>
-
-                  <li>
-                     <div class="sinfo">
-                        <img src="images/sericon5.png" alt="">
-                        <h6>Forest Planting</h6>
-                        <p>Make Plants Alive for Life</p>
-                     </div>
-                  </li>
-
-               </ul>
-            </div>
-         </section>-->
-         <!--Service Area End--> 
-         <!--About Section Start-->
          <section class="h3-about wf100 p80" id="NOSOTROS">
             <div class="container">
                <div class="row">
@@ -222,20 +172,20 @@ include ("conexion.php");
                      <div class="col-lg-4">
                         <div class="volunteer-form">
                            <div class="section-title">
-                              <h3>Join us Now</h3>
+                              <h3>CONTACTANOS</h3>
                            </div>
                            <ul>
                               <li>
-                                 <input type="text" class="form-control" placeholder="Your Name" aria-label="Your Name">
+                                 <input type="text" class="form-control" placeholder="Ingrese Nombre" aria-label="Ingrese Nombre">
                               </li>
                               <li>
-                                 <input type="text" class="form-control" placeholder="Email Address" aria-label="Email Address">
+                                 <input type="text" class="form-control" placeholder="Ingrese Correo" aria-label="Ingrese Correo">
                               </li>
                               <li>
-                                 <input type="text" class="form-control" placeholder="Contact" aria-label="Contact">
+                                 <input type="text" class="form-control" placeholder="Ingrese telefono" aria-label="Contact">
                               </li>
                               <li>
-                                 <input type="submit" class="fsubmit" value="Signup to Join us">
+                                 <input type="submit" class="fsubmit" value="ENVIAR">
                               </li>
                            </ul>
                         </div>
