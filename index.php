@@ -175,6 +175,7 @@ include ("conexion.php");
                               <h3>CONTACTANOS</h3>
                            </div>
                            <ul>
+                              <form>
                               <li>
                                  <input type="text" class="form-control" placeholder="Ingrese Nombre" aria-label="Ingrese Nombre">
                               </li>
@@ -187,6 +188,7 @@ include ("conexion.php");
                               <li>
                                  <input type="submit" class="fsubmit" value="ENVIAR">
                               </li>
+                              </form>
                            </ul>
                         </div>
                      </div>
