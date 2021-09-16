@@ -7,7 +7,7 @@
                         <div class="footer-widget">
                            <h4>SOBRE LA EMPRESA</h4>
                            <p> If anything’s hot in today’s economy, it’s saving money, including a broad range of green businesses helping people save energy, water, and other resources. Definitely, you can go with this business as it is a nothing but the future. </p>
-                           <a href="#NOSOTROS" class="lm">NOSOTROS</a> 
+                           <a href="index.php#NOSOTROS" class="lm">NOSOTROS</a> 
                         </div>
                         <!--Footer Widget End--> 
                      </div>
@@ -15,13 +15,15 @@
                         <!--Footer Widget Start-->
                         <div class="footer-widget">
                            <h4>Servicios-Generales</h4>
+                           <?php 
+                           $select_titulos_sg="SELECT titulo FROM `servicios_generales` WHERE estado='Activo' LIMIT 3";
+                           $ejecutar_sg=mysqli_query($con,$select_titulos_sg);
+
+                           ?>
                            <ul class="quick-links">
-                              <li><a href="#">TITULO</a></li>
-                              <li><a href="#">TITULO</a></li>
-                              <li><a href="#">TITULO</a></li>
-                              <li><a href="#">TITULO</a></li>
-                              <li><a href="#">TITULO</a></li>
-                              <li><a href="#">TITULO</a></li>
+                              <?php  while ($titulos=mysqli_fetch_array($ejecutar_sg,$base)) {?>
+                              <li><a href="#"><?php echo $titulos["titulo"]?></a></li>
+                              <?php }?>
                            </ul>
                         </div>
                         <!--Footer Widget End--> 
@@ -31,9 +33,17 @@
                         <div class="footer-widget">
                            <h4>Servicios-Especies</h4>
                            <ul class="lastest-products">
-                              <li> <img src="images/NUEVAS/cerezas.jpg" alt="" width="70"> <strong><a href="#">DESCRIPCION</a></strong> </li>
-                              <li> <img src="images/NUEVAS/cerezas.jpg" alt="" width="70"> <strong><a href="#">DESCRIPCION</a></strong> </li>
-                              <li> <img src="images/NUEVAS/cerezas.jpg" alt="" width="70"> <strong><a href="#">DESCRIPCION</a></strong> </li>
+                           <?php 
+                           $select_especies_fo="SELECT id , especie,
+                           SUBSTRING(imagen1,INSTR(imagen1,'images'),LENGTH(imagen1)) as 'IMAGEN1',
+                           SUBSTRING(imagen_cabezera_detalle,INSTR(imagen_cabezera_detalle,'images'),LENGTH(imagen_cabezera_detalle)) as 'IMAGEN_SETEADA' 
+                           FROM especies
+                           where estado='Activo' LIMIT 3";
+                           $ejecutar_especies_fo=mysqli_query($con,$select_especies_fo);
+                           while($ver_especie_fo=mysqli_fetch_array($ejecutar_especies_fo,$base)){
+                           ?>
+                              <li> <img src="<?php echo $ver_especie_fo["IMAGEN1"];?>" alt="" width="70"> <strong><a href="detalle-especie.php?especie=<?php echo $ver_especie_fo["especie"];?>"><?php echo $ver_especie_fo["especie"] ?></a></strong> </li>
+                           <?php }?>
                            </ul>
                         </div>
                         <!--Footer Widget End--> 
@@ -43,9 +53,21 @@
                      <div class="footer-widget">
                            <h4>Servicios-Terreno</h4>
                            <ul class="lastest-products">
-                             <li> <img src="images/h2news1.jpg" alt="" width="70"> <strong><a href="#">DESCRIPCION</a></strong> </li>
-                              <li> <img src="images/h2news1.jpg" alt="" width="70"> <strong><a href="#">DESCRIPCION</a></strong> </li>
-                              <li> <img src="images/h2news1.jpg" alt="" width="70"> <strong><a href="#">DESCRIPCION</a></strong> </li>
+
+                           <?PHP 
+                              $terreno="SELECT 
+                                          id
+                                          ,titulo
+                                          ,parrafo
+                                          ,destacado
+                                          ,SUBSTRING(imagen,INSTR(imagen,'images'),LENGTH(imagen)) as 'IMAGEN_SETEADA'
+                                          FROM servicios_terreno
+                                          WHERE estado='Activo' LIMIT 3";
+                               $ejecutar_terreno=mysqli_query($con,$terreno);
+                              while($ver_terreno=mysqli_fetch_array($ejecutar_terreno,$base)){
+                           ?>
+                             <li> <img src="<?php echo $ver_terreno["IMAGEN_SETEADA"];?>" alt="" width="70"> <strong><a href="#"><?php echo $ver_terreno["titulo"];?></a></strong> </li>
+                           <?php }?>
                            </ul>
                         </div>
                         <!--Footer Widget End--> 
