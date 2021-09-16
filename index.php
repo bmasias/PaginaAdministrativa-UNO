@@ -25,6 +25,7 @@ include ("conexion.php");
       <!-- CSS FILES End -->
    </head>
    <body>
+      
       <div class="wrapper home2">
         
          <?php include("navegacion.php");?>
@@ -342,6 +343,13 @@ include ("conexion.php");
       <script src="js/jquery.prettyPhoto.js"></script> 
       <script src="js/isotope.min.js"></script> 
       <script src="js/custom.js"></script>
+
+                       <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'ko', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
    </body>
 
 </html>

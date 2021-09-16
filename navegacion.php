@@ -24,8 +24,8 @@
  
                   </ul>
                   <div class="idiomas">
-                        <a href="index.php?lang=en"><span class="flag-icon flag-icon-us "></span></a>
-                        <a href="index.php?lang=es"><span class="flag-icon flag-icon-es"></a>
+                        <a href="" id="google_translate_element"></a>
+                        
                      </div>
 
                </div>
