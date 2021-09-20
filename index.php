@@ -178,18 +178,59 @@ include ("conexion.php");
                            <ul>
                               <form action="index.php" method="POST">
                               <li>
-                                 <input type="text" class="form-control" placeholder="Ingrese Nombre" aria-label="Ingrese Nombre">
+                                 <input type="text" class="form-control" placeholder="Ingrese Nombre" aria-label="Ingrese Nombre" name="txt_nombre"  required="">
                               </li>
                               <li>
-                                 <input type="text" class="form-control" placeholder="Ingrese Correo" aria-label="Ingrese Correo">
+                                 <input type="email" class="form-control" placeholder="Ingrese Correo" aria-label="Ingrese Correo" name="txt_email" required="">
                               </li>
                               <li>
-                                 <input type="text" class="form-control" placeholder="Ingrese telefono" aria-label="Contact">
+                                 <input type="number" class="form-control" placeholder="Ingrese telefono" aria-label="Contact" name="txt_telefono"  maxlength="9" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  required="">
                               </li>
                               <li>
-                                 <input type="submit" class="fsubmit" value="ENVIAR">
+                                 <input type="submit" class="fsubmit" name="btn_contacto" value="ENVIAR">
                               </li>
                               </form>
+
+                              <?php 
+                                 if ($_POST["btn_contacto"]) {
+                                    
+                                    $nombre=$_POST["txt_nombre"];
+                                    $email=$_POST["txt_email"];
+                                    $telefono=$_POST["txt_telefono"];
+
+                                    $para      = 'contacto@agrofaenas.cl';
+                                    $titulo    = 'CONTACTO WEB';
+                                    /*$mensaje   = 'SE HAN CONTACTADO VIA WEB, NOMBRE:'.' '.$nombre.',TELEFONO:'.$telefono.', CORREO: '.$email;*/
+                                   $mensaje = "SE HAN CONTACTADO VIA WEB\n".
+                                              "Nombre: $nombre\n".
+                                              "Correo: $email\n".
+                                              "TELEFONO: +56$telefono\n".
+                                              "";
+
+                                    //mail($para, $titulo, $mensaje, $email);
+
+                                    if(mail($para, $titulo, $mensaje, $email)) {
+                                         echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                             <strong>Mensaje Enviado
+                                             <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                                               <span aria-hidden='true'>&times;</span>
+                                             </button>
+                                           </div>";
+                                        
+                                    } else {
+
+                                        echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                             <strong>Error, al enviar mensaje
+                                             <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                                               <span aria-hidden='true'>&times;</span>
+                                             </button>
+                                           </div>";
+                                       
+                                    }
+
+                                 }
+
+                              ?>
                            </ul>
                         </div>
                      </div>
