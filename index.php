@@ -199,7 +199,6 @@ include ("conexion.php");
                                     $nombre=$_POST["txt_nombre"];
                                     $email=$_POST["txt_email"];
                                     $telefono=$_POST["txt_telefono"];
-
                                     $para      = 'contacto@agrofaenas.cl';
                                     $titulo    = 'CONTACTO WEB';
                                     /*$mensaje   = 'SE HAN CONTACTADO VIA WEB, NOMBRE:'.' '.$nombre.',TELEFONO:'.$telefono.', CORREO: '.$email;*/
@@ -208,9 +207,7 @@ include ("conexion.php");
                                               "Correo: $email\n".
                                               "TELEFONO: +56$telefono\n".
                                               "";
-
                                     //mail($para, $titulo, $mensaje, $email);
-
                                     if(mail($para, $titulo, $mensaje, $email)) {
                                          echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
                                              <strong>Mensaje Enviado
@@ -218,20 +215,15 @@ include ("conexion.php");
                                                <span aria-hidden='true'>&times;</span>
                                              </button>
                                            </div>";
-                                        
                                     } else {
-
                                         echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
                                              <strong>Error, al enviar mensaje
                                              <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                                <span aria-hidden='true'>&times;</span>
                                              </button>
                                            </div>";
-                                       
                                     }
-
                                  }
-
                               ?>
                            </ul>
                         </div>
