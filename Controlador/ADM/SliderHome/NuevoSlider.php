@@ -35,15 +35,15 @@
               <form class="user" method="POST" action="NuevoSlider.php" enctype="multipart/form-data">
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user"  name="txt_titulo" placeholder=" Ingrese Titulo" required="">
+                    <input type="text" class="form-control form-control-user"  name="txt_titulo" placeholder=" Ingrese Titulo" >
                   </div>
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user"  placeholder="Ingrese Texto Destacado" name="txt_subtitulo" required="" >
+                    <input type="text" class="form-control form-control-user"  placeholder="Ingrese Texto Destacado" name="txt_subtitulo" >
                   </div>
                 </div>
                  <div class="form-group row">
                   <div class="col-sm-12 mb-3 mb-sm-0">
-                    <input type="file" class="form-control "  placeholder=" Ingrese Imagen" name="imagen" required="">
+                    <input type="file" class="form-control "  placeholder=" Ingrese Imagen" name="imagen" >
                   </div>
 
                 </div>

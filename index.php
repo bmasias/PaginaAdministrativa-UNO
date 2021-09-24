@@ -52,7 +52,7 @@ include ("conexion.php");
             <div class="item">
                <div class="slider-caption h2slider">
                   <div class="container">
-                     <strong>AGROFAENAS <span><?PHP echo $ver_slider["titulo"];?></span></strong>
+                     <strong><span><?PHP echo $ver_slider["titulo"];?></span></strong>
                      <h1><?PHP echo $ver_slider["subtitulo"];?></h1>
                      <p><?PHP echo $ver_slider["parrafo"];?></p>
                      <!--<a href="#" class="active">Find Out More</a> <a href="#">Join us Now</a> -->
