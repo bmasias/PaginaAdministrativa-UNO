@@ -38,7 +38,7 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">SUBIR IMAGEN</h1>
               </div>
-              <form class="user" method="POST" action="cargarImagen.php" enctype="multipart/form-data" autocomplete="off">
+              <form class="user" method="POST" action="CargarImagen.php" enctype="multipart/form-data" autocomplete="off">
                 <input type="text" name="txt_id" hidden="" readonly="" value="<?php echo "$idNosotros" ?>">
                 <div class="col-sm-12 mb-3 mb-sm-0">
                       <input type="file" class="form-control" id="archivo" name="archivo">
